@@ -13,40 +13,43 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+h1 {
+    margin: 0px;
+}
+
 /* TITLE SELECTORS */
 .title-container {
+    height: 35px;
     margin-top:10px;
-    margin-bottom:10px;
-    height: 40px;
 }
 
 .title-1 {
-    text-align: center;
     font-size: 1.75em;
+    text-align: center;
 }
 
 .title-2 {
-    text-align: left;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1em;
     margin-left: 10px;
     overflow-x: hidden;
+    text-align: left;
 }
 
 /* MENU ITEM BOX SELECTORS */
 .menu-item {
     background-color: #999999;
-    border: #000000 2px solid;
-    height: 100px;
+    border: #000000 1px solid;
+    height: 150px;
     margin: 10px;
+    overflow: hidden;
     padding-left:10px;
     padding-right:10px;
-    overflow: hidden;
 }
 
 /* MENU ITEM TITLE SELECTORS */
 .menu-item-title {
-    border-bottom: #000000 2px solid;
+    border-bottom: #000000 1px solid;
     font-size: 1.25em;
     font-weight: bold;
     margin-bottom: 5px;
@@ -55,7 +58,7 @@ body {
 }
 
 .menu-item-title-large {
-    border-left: #000000 2px solid;
+    border-left: #000000 1px solid;
     float: right;
     margin-right: -10px;
     width: 100px;
@@ -69,9 +72,9 @@ body {
 
 /* MENU ITEM CONTENT SELECTORS */
 .menu-item-content {
-    font-size: 1em;
-    height: 80px;
     clear: both;
+    font-size: 1em;
+    height: 130px;
     padding-bottom: 15px;
 }
 
@@ -103,6 +106,7 @@ body {
 
 /* DESKTOP VIEW */
 @media (min-width: 992px){
+
     .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6,
         .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
         float: left;
@@ -153,6 +157,7 @@ body {
 
 /* TABLET VIEW */
 @media (min-width:768px) and (max-width:991px){
+
     .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
         .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
         float: left;
@@ -203,6 +208,7 @@ body {
 
 /* MOBILE VIEW */
 @media (max-width: 767px) {
+
     .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6,
         .col-sm-7, .col-md-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
         float: left;
