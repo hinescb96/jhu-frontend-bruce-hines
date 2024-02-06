@@ -14,9 +14,10 @@ body {
 }
 
 /* TITLE SELECTORS */
-.title {
-    margin-top: 20px;
-    margin-bottom: 20px;
+.title-container {
+    margin-top:10px;
+    margin-bottom:10px;
+    height: 40px;
 }
 
 .title-1 {
@@ -27,14 +28,13 @@ body {
 .title-2 {
     text-align: left;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.5em;
+    font-size: 1em;
     margin-left: 10px;
     overflow-x: hidden;
 }
 
 /* MENU ITEM BOX SELECTORS */
 .menu-item {
-    position: relative;
     background-color: #999999;
     border: #000000 2px solid;
     height: 100px;
@@ -70,11 +70,10 @@ body {
 /* MENU ITEM CONTENT SELECTORS */
 .menu-item-content {
     font-size: 1em;
-    height: 90%;
+    height: 80px;
     clear: both;
-    padding-bottom: 50px;
+    padding-bottom: 15px;
 }
-
 
 .menu-item:hover .menu-item-content{
     cursor: ns-resize;
@@ -213,6 +212,9 @@ body {
     }
     .menu-item-title-large {
         display: none;
+    }
+    .menu-item-content {
+        padding-bottom: 56px;
     }
     .col-sm-1 {
         width: 8.33%;
