@@ -15,58 +15,70 @@ body {
 
 /* TITLE SELECTORS */
 .title {
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .title-1 {
     text-align: center;
+    font-size: 1.75em;
 }
 
 .title-2 {
     text-align: left;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5em;
     margin-left: 10px;
     overflow-x: hidden;
 }
 
 /* MENU ITEM BOX SELECTORS */
-.menu-item-box {
+.menu-item {
+    position: relative;
     background-color: #999999;
     border: #000000 2px solid;
     height: 100px;
     margin: 10px;
-    padding: 10px;
-    position: relative;
+    padding-left:10px;
+    padding-right:10px;
     overflow: hidden;
-    overflow-block: 10px;
-}
-
-.menu-item-box:hover{
-    cursor: ns-resize;
-    overflow-y: scroll;
 }
 
 /* MENU ITEM TITLE SELECTORS */
-.menu-item-title-box {
+.menu-item-title {
     border-bottom: #000000 2px solid;
+    font-size: 1.25em;
     font-weight: bold;
+    margin-bottom: 5px;
     text-align: center;
     width:100px;
 }
 
-.menu-item-title-box-large {
+.menu-item-title-large {
     border-left: #000000 2px solid;
-    position: absolute;
-    top: 0px;
-    right: 0px;
+    float: right;
+    margin-right: -10px;
     width: 100px;
 }
 
-.menu-item-title-box-small {
+.menu-item-title-small {
     margin-left: -10px;
     margin-right: -10px;
-    margin-top: -10px;
     width: inherit;
+}
+
+/* MENU ITEM CONTENT SELECTORS */
+.menu-item-content {
+    font-size: 1em;
+    height: 90%;
+    clear: both;
+    padding-bottom: 50px;
+}
+
+
+.menu-item:hover .menu-item-content{
+    cursor: ns-resize;
+    overflow-y: scroll;
 }
 
 /* MENU ITEM TYPE SELECTORS */
@@ -85,7 +97,7 @@ body {
     color: #000000;
 }
 
-/* RESPONSIVE DESIGN SELECTORS*/
+/* RESPONSIVE DESIGN SELECTORS */
 .row {
     width: 100%;
 }
@@ -99,8 +111,8 @@ body {
     .title-2 {
         display: none;
     }
-    .menu-item-title-box-small {
-        display:none;
+    .menu-item-title-small {
+        display: none;
     }
     .col-lg-1 {
         width: 8.33%;
@@ -149,8 +161,8 @@ body {
     .title-2 {
         display: none;
     }
-    .menu-item-title-box-small{
-        display:none;
+    .menu-item-title-small{
+        display: none;
     }
     .col-md-1 {
         width: 8.33%;
@@ -199,8 +211,8 @@ body {
     .title-1{
         display: none;
     }
-    .menu-item-title-box-large {
-        display:none;
+    .menu-item-title-large {
+        display: none;
     }
     .col-sm-1 {
         width: 8.33%;
