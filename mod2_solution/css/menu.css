@@ -40,8 +40,6 @@ body {
     height: 150px;
     margin: 10px;
     overflow: hidden;
-    padding-left:10px;
-    padding-right:10px;
 }
 
 /* MENU ITEM TITLE SELECTORS */
@@ -57,13 +55,12 @@ body {
 .menu-item-title-large {
     border-left: #000000 1px solid;
     float: right;
-    margin-right: -10px;
     width: 100px;
 }
 
 .menu-item-title-small {
-    margin-left: -10px;
-    margin-right: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
     width: inherit;
 }
 
@@ -73,6 +70,8 @@ body {
     font-size: 1em;
     height: 130px;
     padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .menu-item:hover .menu-item-content{
