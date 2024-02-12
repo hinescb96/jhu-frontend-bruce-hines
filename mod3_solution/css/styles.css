@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+#food-llc-header-navbar {
+    border-radius: 0;
+}
+
+.title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.row {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.menu-item {
+    background-color: #999999;
+    border: #000000 1px solid;
+    height: 700px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.menu-item-title {
+    font-size: 1.25em;
+    font-weight: bold;
+    text-align: center;
+}
