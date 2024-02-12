@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-#food-llc-header-navbar {
+#menu-header-navbar {
     border-radius: 0;
 }
 
@@ -13,22 +13,53 @@
 }
 
 .row {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .menu-item {
-    background-color: #999999;
+    background-color: #b15050;
     border: #000000 1px solid;
+    color: white;
     height: 700px;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.menu-item a {
+    color:rgb(14, 222, 153);
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .menu-item-title {
     font-size: 1.25em;
     font-weight: bold;
     text-align: center;
+}
+
+#menu-navbar-collapsed {
+    background-color: #b15050;
+}
+
+#nav-list {
+    border-top: 1px solid black; 
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#nav-list a {
+    border-bottom: 1px solid black;
+    color: White;
+    font-weight: bold;
+}
+
+#nav-list a:hover {
+    background: #e7e7e7;
+}
+
+#nav-list a span {
+    font-size: 1.8em;
 }
