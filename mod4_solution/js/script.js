@@ -24,11 +24,8 @@ Good Bye Jim
 
 // STEP 1:
 // Wrap the entire contents of script.js inside of an IIFE
-// See Lecture 52, part 2
-// (Note, Step 2 will be done in the SpeakHello.js file.)
-
-var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
 (function() {
+  var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
   // STEP 10:
   // Loop over the names array and say either 'Hello' or "Good Bye"
   // using either the helloSpeaker's or byeSpeaker's 'speak' method.
@@ -57,8 +54,9 @@ var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula"
     }
   }
 
-  // STEP 2 JHU SPECIFIC 
+  // ---STEP 2 JHU SPECIFIC---
   console.log("---Second List Print---")
+  // Custom Map Function
   function customMapFunction(value, index, array) {
     var firstLetter = value.charAt(0).toLowerCase();
     if (firstLetter === "j") {
@@ -74,8 +72,9 @@ var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula"
     console.log(greetings[greeting]);
   }
 
-  // STEP 3 JHU SPECIFIC (BONUS)
+  // ---STEP 3 JHU SPECIFIC (BONUS)---
   console.log("---Third List Print---")
+  // Reduce and set intitial accumulator value to {hello: [], bye []}
   var splitGreetingsLists = names.reduce(function(accumulator, name){
     var firstLetter = name.charAt(0).toLowerCase();
     if (firstLetter === "j") {
