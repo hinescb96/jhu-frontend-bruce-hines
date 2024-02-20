@@ -33,6 +33,7 @@ var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula"
   // Loop over the names array and say either 'Hello' or "Good Bye"
   // using either the helloSpeaker's or byeSpeaker's 'speak' method.
   // See Lecture 50, part 1
+  console.log("---First List Print---")
   for (var name in names) {
 
     // STEP 11:
@@ -67,11 +68,31 @@ var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula"
     }
   }
   var greetings = names.map(customMapFunction);
+
+  // Output STEP 2
   for (var greeting in greetings){
     console.log(greetings[greeting]);
   }
 
   // STEP 3 JHU SPECIFIC (BONUS)
-  
+  console.log("---Third List Print---")
+  var splitGreetingsLists = names.reduce(function(accumulator, name){
+    var firstLetter = name.charAt(0).toLowerCase();
+    if (firstLetter === "j") {
+      accumulator.bye.push(byeSpeaker.speakSimple(name));
+    } else {
+      accumulator.hello.push(helloSpeaker.speakSimple(name));
+    }
+    return accumulator;
+  }, {hello: [], bye: []});
 
+  // Output STEP 3
+  console.log("---Hello Greetings---")
+  for (var helloGreeting in splitGreetingsLists.hello){
+    console.log(splitGreetingsLists.hello[helloGreeting]);
+  }
+  console.log("---Bye Greetings---")
+  for (var byeGreeting in splitGreetingsLists.bye){
+    console.log(splitGreetingsLists.bye[byeGreeting]);
+  }
 })();
