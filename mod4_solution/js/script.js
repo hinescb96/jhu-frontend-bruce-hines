@@ -29,7 +29,6 @@ Good Bye Jim
   // STEP 10:
   // Loop over the names array and say either 'Hello' or "Good Bye"
   // using either the helloSpeaker's or byeSpeaker's 'speak' method.
-  // See Lecture 50, part 1
   console.log("---First List Print---")
   for (var name in names) {
 
@@ -39,7 +38,6 @@ Good Bye Jim
     // names that start with either upper case or lower case 'J'/'j', call
     // string object's 'toLowerCase' method on the result so we can compare
     // to lower case character 'j' afterwards.
-    // Look up these methods on Mozilla Developer Network web site if needed.
     var firstLetter = names[name].charAt(0).toLowerCase();
 
     // STEP 12:
