@@ -22,6 +22,7 @@ var menuItemsUrl =
   "https://coursera-jhu-default-rtdb.firebaseio.com/menu_items/";
 var menuItemsTitleHtml = "snippets/menu-items-title.html";
 var menuItemHtml = "snippets/menu-item.html";
+var aboutPageHtml = "snippets/about.html"
 
 // Convenience function for inserting innerHTML for 'select'
 var insertHtml = function (selector, html) {
@@ -137,7 +138,6 @@ function chooseRandomCategory (categories) {
   return categories[randomArrayIndex];
 }
 
-
 // Load the menu categories view
 dc.loadMenuCategories = function () {
   showLoading("#main-content");
@@ -155,6 +155,37 @@ dc.loadMenuItems = function (categoryShort) {
     menuItemsUrl + categoryShort + ".json",
     buildAndShowMenuItemsHTML);
 };
+
+//JHU About Page Specific Implementation
+dc.loadAboutPage = function () {
+  showLoading("#main-content");
+  $ajaxUtils.sendGetRequest(
+  aboutPageHtml,
+  function (aboutPageHtml) {
+    // console.log(aboutPageHtml)
+    var randomStarRating = chooseRandomStarRating();
+    // console.log(randomStarRating);
+
+    for (var i = 1; i<=5; i++) {
+      var className = "starClass" + i
+      console.log(className);
+      if (i <= randomStarRating){
+        aboutPageHtml = insertProperty(aboutPageHtml, className, "fa fa-star");
+      } else {
+        aboutPageHtml = insertProperty(aboutPageHtml, className, "fa fa-star-o");
+      }
+    }
+
+    console.log(aboutPageHtml);
+    insertHtml("#main-content", aboutPageHtml);
+  },false);
+  
+}
+
+// JHU Random Star Rating Specific Implementation
+function chooseRandomStarRating () {
+  return Math.floor(Math.random() * 5) + 1;
+}
 
 
 // Builds HTML for the categories page based on the data
@@ -341,3 +372,4 @@ function insertItemPortionName(html,
 global.$dc = dc;
 
 })(window);
+
