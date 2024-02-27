@@ -372,4 +372,13 @@ h3.menu-item-title {
 }
 
 
+#starRating {
+  border: 2px black solid;
+  background-color: #222;
+  color: #f6b319;
+  padding: 20px;
+}
 
+#starRatingText {
+  margin-left: 20px;
+}

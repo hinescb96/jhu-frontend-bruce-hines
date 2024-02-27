@@ -162,9 +162,7 @@ dc.loadAboutPage = function () {
   $ajaxUtils.sendGetRequest(
   aboutPageHtml,
   function (aboutPageHtml) {
-    // console.log(aboutPageHtml)
     var randomStarRating = chooseRandomStarRating();
-    // console.log(randomStarRating);
 
     for (var i = 1; i<=5; i++) {
       var className = "starClass" + i
@@ -175,10 +173,12 @@ dc.loadAboutPage = function () {
         aboutPageHtml = insertProperty(aboutPageHtml, className, "fa fa-star-o");
       }
     }
+    // console.log(aboutPageHtml)
 
-    console.log(aboutPageHtml);
+    // BONUS: Insert text value of rating
     insertHtml("#main-content", aboutPageHtml);
-  },false);
+    document.getElementById("starRatingText").textContent = randomStarRating + "-star rating"
+  }, false);
   
 }
 
