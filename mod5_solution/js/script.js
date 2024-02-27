@@ -165,7 +165,7 @@ dc.loadAboutPage = function () {
     var randomStarRating = chooseRandomStarRating();
 
     for (var i = 1; i<=5; i++) {
-      var className = "starClass" + i
+      var className = "starClass" + i;
       console.log(className);
       if (i <= randomStarRating){
         aboutPageHtml = insertProperty(aboutPageHtml, className, "fa fa-star");
@@ -177,7 +177,7 @@ dc.loadAboutPage = function () {
 
     // BONUS: Insert text value of rating
     insertHtml("#main-content", aboutPageHtml);
-    document.getElementById("starRatingText").textContent = randomStarRating + "-star rating"
+    document.getElementById("starRatingText").textContent = randomStarRating + "-star rating";
   }, false);
   
 }
