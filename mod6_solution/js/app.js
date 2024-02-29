@@ -5,8 +5,11 @@
 
     .controller('LunchCheckController', function ($scope) {
         $scope.lunchItemsString = "";
+
         $scope.lunchItemsCheck = function() {
             var numberOfItems = parseLunchItems($scope.lunchItemsString);
+            $scope.lunchStyleClass = generateLunchStyleClass(numberOfItems);
+            console.log($scope.lunchStyleClass);
             $scope.lunchMessage = generateLunchMessage(numberOfItems);
         };
     });
@@ -34,6 +37,14 @@
             return "Enjoy!";
         } else {
             return "Too much!";
+        }
+    }
+
+    function generateLunchStyleClass(numberOfItems){
+        if (numberOfItems === 0){
+            return "lunch-error";
+        } else {
+            return "lunch-success";
         }
     }
 })();

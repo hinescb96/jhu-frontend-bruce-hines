@@ -1,0 +1,15 @@
+div.lunch-error {
+    color:red;
+}
+
+input.lunch-error {
+    border: red solid 1px;
+}
+
+div.lunch-success {
+    color: green;
+}
+
+input.lunch-success {
+    border: green solid 1px;
+}
