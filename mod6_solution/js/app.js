@@ -2,8 +2,10 @@
     'use-strict';
 
     angular.module('LunchCheck', [])
-
-    .controller('LunchCheckController', function ($scope) {
+    .controller('LunchCheckController', LunchCheckController);
+    
+    LunchCheckController.$inject = ['$scope'];
+    function LunchCheckController ($scope) {
         $scope.lunchItemsString = "";
 
         $scope.lunchItemsCheck = function() {
@@ -12,7 +14,7 @@
             console.log($scope.lunchStyleClass);
             $scope.lunchMessage = generateLunchMessage(numberOfItems);
         };
-    });
+    };
 
     function parseLunchItems(itemsString) {
         var items = itemsString.split(",");
