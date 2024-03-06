@@ -13,7 +13,7 @@
         // lunchItemsString is bound to the input text box
         $scope.lunchItemsString = "";
 
-        // lunchItemsCheck() is bound to the button click event
+        // lunchItemsCheck() is bound to the button ng-click event
         $scope.lunchItemsCheck = function() {
 
             // Parse the input field text via CSV rules
@@ -62,3 +62,4 @@
         }
     }
 })();
+console.log(window);
