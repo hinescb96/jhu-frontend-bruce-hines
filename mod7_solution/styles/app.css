@@ -1,0 +1,9 @@
+h1, h2 {
+    color: #453535;
+}
+
+input[type="number"] {
+    width: 70px;
+    padding: 6px;
+    margin-right: 5px;
+}

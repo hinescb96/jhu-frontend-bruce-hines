@@ -33,9 +33,8 @@
         alreadyBought.empty = function () {
             if (alreadyBought.items.length === 0) {
                 return true;
-            } else {
-                return false;
-            }
+            } 
+            return false;
         }
 
         alreadyBought.getCurrency = function(value) {
@@ -56,10 +55,8 @@
             { name: "Steak", pricePerItem:2.5, quantity: 15 }
         ];
 
-
         service.purchase = function (itemIndex) {
             boughtItem = toBuyItems.splice(itemIndex, 1)[0];
-            console.log(boughtItem);
             alreadyBoughtItems.push(boughtItem);
         };
 
@@ -75,7 +72,7 @@
     function AngularCurrencyFilter() {
         return function (input) {
             input = input || "";
-            input = "$$$" + input;
+            input = "$$$" + input.toFixed(2);
             return input;
         }
     }
