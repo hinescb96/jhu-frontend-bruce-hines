@@ -33,9 +33,9 @@
         <div ng-controller="ToBuyController as toBuy" class="col-md-6">
           <h2>To Buy:</h2>
           <ul>
-            <li ng-repeat="item in toBuy.items">
-              Buy <input id="quantity" ng-model="item.quantity" type="number">{{item.name}}
-              <span class="text-right">
+            <li ng-repeat="item in toBuy.items" class="buy-item">
+              Buy <input id="quantity" ng-model="item.quantity" type="number"> {{item.name}} ($$${{item.pricePerItem}} each)
+              <span class="button-container">
                 <button ng-click="toBuy.purchase($index)">
                   Bought
                 </button>

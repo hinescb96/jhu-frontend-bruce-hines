@@ -4,6 +4,31 @@ h1, h2 {
 
 input[type="number"] {
     width: 70px;
-    padding: 6px;
+    padding: 4px;
+    font-size: 15px;
+    margin-top: -4px;
     margin-right: 5px;
+    margin-left: 5px;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #000000;
+    color: #FFFFFF;
+    float: right;
+    margin-left: 10px;
+    width: 100px;
+}
+
+.buy-item{
+    display: flex;
+    text-align: center;
+}
+
+.button-container {
+    flex-grow: 1;
+    text-align: right;
 }

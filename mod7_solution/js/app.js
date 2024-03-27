@@ -48,11 +48,11 @@
         var alreadyBoughtItems = [];
 
         toBuyItems = [
-            { name: "Diet Coke", pricePerItem:2.5, quantity: 10 },
-            { name: "Donuts", pricePerItem:2.5, quantity: 5 },
-            { name: "Pizza", pricePerItem:2.5, quantity: 20 },
-            { name: "Sushi", pricePerItem:2.5, quantity: 8 },
-            { name: "Steak", pricePerItem:2.5, quantity: 15 }
+            { name: "Diet Coke", pricePerItem: 5, quantity: 10 },
+            { name: "Donuts", pricePerItem: 6, quantity: 5 },
+            { name: "Pizza", pricePerItem: 4, quantity: 20 },
+            { name: "Sushi", pricePerItem: 20, quantity: 8 },
+            { name: "Steak", pricePerItem: 7, quantity: 15 }
         ];
 
         service.purchase = function (itemIndex) {
